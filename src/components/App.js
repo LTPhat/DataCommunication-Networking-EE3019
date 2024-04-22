@@ -6,8 +6,8 @@ import AddressingModule from "../modules/AddressingModule";
 import {toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Result from "./Result";
-// NODE: ADD LOGO BK O TREN DAU
-// ADD EXPLAIN - IF CAN
+
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -144,7 +144,6 @@ class App extends React.Component {
             sumOfHosts: 0
         });
     }
-
     render() {
         if (this.state.calculated && this.state.calculated_subnets.length > 0) {
             return <Result result={this.state.calculated_subnets} hosts={this.state.subnet_hosts}
@@ -154,8 +153,13 @@ class App extends React.Component {
 
         return (
             <div id='main_div'>
-                <h2 className="ui">Data Communications and Networking Course Project - Group 27</h2>
-                <h2 className='ui dividing header' style={{ color: 'green' }}>Welcome to VLSM Subnetting Calculator</h2>
+                <h2 className="ui" style={{
+                    fontSize: "30px", 
+                    fontWeight: "bold", 
+                    textAlign: "center",
+                    color: "#FFC300 ",
+                }}>Data Communications and Networking Course Project - Group 27</h2>
+                <h2 className='ui dividing header' style={{ color: '#46FF00',fontSize: "25px" }}>Welcome to VLSM Calculator</h2>
                 <br/>
                 <div className='ui raised segment'>
                     <form className='ui form' autoComplete={'off'} onSubmit={this.handleVlsmFormSubmit}>
@@ -202,11 +206,7 @@ class App extends React.Component {
                         </div>
                     </form>
                 </div>
-                <br/>
-                {/* <div id='copyright_div'>
-                    <p><i className='code icon'/> <a href='https://github.com/hossensyedriadh' rel='noreferrer'
-                                                     target='_blank'>Syed Riadh Hossen</a></p>
-                </div> */}
+                
             </div>
         );
     }

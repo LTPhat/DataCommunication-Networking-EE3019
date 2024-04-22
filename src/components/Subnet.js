@@ -27,15 +27,15 @@ class Subnet extends React.Component {
             <div className='ui raised segment' id='subnet_div'>
                 <div className='active title'>
                         <span>
-                            <strong>Hosts: </strong>{this.state.hosts} | <strong>Address: </strong>{this.state.address}  | <strong>Subnet
+                            <strong>Hosts: </strong> <strong style={{color:"LightCoral"}}>{this.state.hosts}</strong> | <strong>Address: </strong> <strong style={{color:"LawnGreen"}}>{this.state.address}</strong>  | <strong>Subnet
                             Mask: </strong>{this.state.subnet_mask} | <strong>CIDR: </strong>{this.state.cidr}</span>
-                    <i className='dropdown icon' id='dropdown_icon'/>
+                    {/* <i className='dropdown icon' id='dropdown_icon'/> */}
                 </div>
                 <div className='active content'>
-                    <p><strong>Default Gateway: </strong>{this.state.default_gateway} | <strong>Last Host
-                        Address: </strong> {this.state.last_host_address} | <strong>Broadcast
-                        Address: </strong>{this.state.broadcast_address}  </p>
-                    <p><strong>Available host addresses: </strong>{this.state.addresses_available}</p>
+                    <p><strong>Default Gateway: </strong> <strong style={{color:"Cyan"}}>{this.state.default_gateway}</strong> | <strong>Last Host
+                        Address: </strong> <strong style={{color:"Gold"}}>{this.state.last_host_address}</strong> | <strong>Broadcast
+                        Address: </strong> <strong style={{color:"red"}}>{this.state.broadcast_address}</strong>  </p>
+                    <p><strong>Available host addresses: </strong><strong style={{color:"MediumSpringGreen"}}>{this.state.addresses_available}</strong></p>
                 </div>
             </div>
         );
