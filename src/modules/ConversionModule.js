@@ -62,7 +62,7 @@ class ConversionModule {
             throw Exceptions.ILLEGAL_ARGUMENT_EXCEPTION;
         }
     }
-
+    // Convert binary string to 8-bit binary string
     toByte = (bin) => {
         bin = String(bin);
         let binLength = bin.length;

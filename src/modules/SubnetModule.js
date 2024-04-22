@@ -18,11 +18,11 @@ class SubnetModule {
             mtHosts[i] = Number(hosts[i]) + Number(2);
             sumOfHosts += Number(mtHosts[i]);
         }
-
+        // Check if the major network can accomodate input host list
         if (sumOfHosts <= AddressingModule.getTotalAddresses(majorNetwork.cidr)) {
             let cidr = new Array(hosts.length);
 
-            //calculating CIDR values
+            //calculating CIDR values for each subneting
             for (let i = 0; i < cidr.length; i += 1) {
                 for (let j = 32; j >= majorNetwork.cidr; j -= 1) {
                     if (mtHosts[i] <= AddressingModule.getTotalAddresses(j)) {
@@ -48,7 +48,7 @@ class SubnetModule {
             //calculating bits available for host address
             let hostPortionBitLength = 32 - majorNetwork.cidr;
 
-            let addresses = new Array(subnets.length);
+            let addresses = new Array(subnets.length);  
             addresses[0] = Number(ConversionModule.format("0", hostPortionBitLength));
 
             //generating host address bits
