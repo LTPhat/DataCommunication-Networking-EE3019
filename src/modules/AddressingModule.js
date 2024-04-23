@@ -7,12 +7,13 @@ class AddressingModule {
         cidr = Number(cidr);
 
         let hostBinary = "";
-
+        // Split host address into chunks and convert each chunk into binary
         for (let i = 0; i < 4; i += 1) {
             hostBinary = hostBinary.concat(ConversionModule.toByte(
                 ConversionModule.decToBin(Number(host.split(".")[i]))));
         }
 
+        // Create binary address from binary chunks
         let bin = hostBinary.toString().split('');
 
         let binaryNetworkAddress = "";
@@ -31,7 +32,7 @@ class AddressingModule {
 
         return this.getDottedDecimalAddress(binaryNetworkAddress);
     }
-
+    // Convert binary address to decimal address
     getDottedDecimalAddress = (binaryAddress) => {
         binaryAddress = String(binaryAddress);
 
@@ -122,7 +123,7 @@ class AddressingModule {
 
         return dottedDecimalLastHost.toString();
     }
-
+    // Get Cidr from subnetMask input
     getCidr = (subnetMask) => {
         subnetMask = String(subnetMask);
         let splitSubnetMask = subnetMask.split(".");
@@ -192,7 +193,7 @@ class AddressingModule {
 
         return cidr1 === cidr2;
     }
-
+    // Get subnetmask from cidr input
     getSubnetMask = (cidr) => {
         cidr = Number(cidr);
 

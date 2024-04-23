@@ -25,10 +25,10 @@ class Result extends React.Component {
     render() {
         return (
             <div id='main_div'>
-                <h3 className='ui dividing header'>VLSM Result</h3>
+                <h3 className='ui dividing header' style={{color: "Gold", fontWeight: "bold", fontSize: "30px"}}>VLSM Result</h3>
                 <br/>
                 <div className='ui raised segment' id='major_network'>
-                    <p><strong>Network Address: </strong>{this.state.network_address}/{this.state.cidr}</p>
+                    <p><strong>Network Address: </strong> <strong style={{color: 'green'}}>{this.state.network_address}/{this.state.cidr}</strong></p>
                     <p><strong>Subnet Mask: </strong>{this.state.subnet_mask}</p>
                 </div>
                 <div className='ui raised segment'>
