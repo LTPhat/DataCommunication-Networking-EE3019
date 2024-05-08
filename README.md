@@ -2,6 +2,14 @@
 
 - Data Communications and Network (EE 3019) Course Project.
 - VLSM Subnetting Calculator App using ReactJS.
+# Description
+- Flow chart
+  
+![alt text](https://github.com/LTPhat/DataCommunication-Networking-Project-EE3019/blob/main/images/flow.png)
+
+- Class diagram
+
+![alt text](https://github.com/LTPhat/DataCommunication-Networking-Project-EE3019/blob/main/images/diagram.png)
 
 # Tutorials
 - Clone repo.
