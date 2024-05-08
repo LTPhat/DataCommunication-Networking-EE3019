@@ -47,7 +47,7 @@ class Result extends React.Component {
                 <div id='buttons_div'>
                     <span className='ui button' onClick={this.handleGoBackAction}>
                         <i className='left arrow icon'/>
-                        Go Back
+                        Complete!
                     </span>
                 </div>
             </div>

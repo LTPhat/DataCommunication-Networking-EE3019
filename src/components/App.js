@@ -174,7 +174,7 @@ class App extends React.Component {
                                            placeholder='i.e.: 192.168.1.0'/>
                                 </div>
                                 <div className='field' id='cidr_or_mask_field'>
-                                    <label htmlFor='cidr_or_mask'>CIRD/Subnet Mask</label>
+                                    <label htmlFor='cidr_or_mask'>CIDR/Subnet Mask</label>
                                     <input type='text' id='cidr_or_mask' className='ui input' required={true}
                                            style={{fontStyle: "italic"}}
                                            onKeyUp={this.handleCidrSubnetMaskValidation}
